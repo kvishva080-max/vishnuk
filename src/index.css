@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg: #0b0f19;
+  --color-surface: #0f131d;
+  --color-surface-container-low: #171b26;
+  --color-surface-container-high: #262a35;
+  --color-primary: #d0bcff;
+  --color-primary-container: #a078ff;
+  --color-secondary: #4cd7f6;
+  --color-tertiary: #ffb0cd;
+  --color-on-surface: #dfe2f1;
+  --color-on-surface-muted: #9aa1b8;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-glow: rgba(76, 215, 246, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-on-surface);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Material symbols utility */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Background Aurora Mesh from Stitch */
+.radial-mesh-aurora {
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(6, 182, 212, 0.16) 0%, transparent 40%),
+    radial-gradient(circle at 50% 60%, rgba(160, 120, 255, 0.1) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Glassmorphism styling */
+.glass-frosted {
+  background: rgba(15, 19, 29, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(23, 27, 38, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(76, 215, 246, 0.4);
+  box-shadow: 0 0 25px -5px rgba(76, 215, 246, 0.2), 0 16px 36px -10px rgba(0, 0, 0, 0.7);
+  transform: translateY(-3px);
+}
+
+/* Cyber Button Styles */
+.cyber-btn-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 20px rgba(139, 92, 246, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+
+.cyber-btn-primary:hover {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 30px rgba(139, 92, 246, 0.65);
+  transform: scale(0.98);
+}
+
+.cyber-btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: all 0.2s ease;
+}
+
+.cyber-btn-secondary:hover {
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(76, 215, 246, 0.5);
+  box-shadow: 0 0 20px rgba(76, 215, 246, 0.25);
+}
+
+/* Pulsing Badge & Dots */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Custom terminal code scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(11, 15, 25, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 120, 255, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(76, 215, 246, 0.5);
+}
+
+/* Gradient text utility */
+.gradient-text-cyan-purple {
+  background: linear-gradient(135deg, #4cd7f6 0%, #a078ff 50%, #ffb0cd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-electric {
+  background: linear-gradient(135deg, #ffffff 30%, #4cd7f6 70%, #a078ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
